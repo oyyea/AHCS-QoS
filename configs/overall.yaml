@@ -1,0 +1,33 @@
+seed: [42, 131, 233, 666, 789]
+#[42, 131, 233, 666, 789]
+data_path: 'dataset1'
+user_data: 'userlist.txt'
+ws_data: 'wslist.txt'
+user_attr: ["Country", "AS", ["Latitude", "Longitude"]]
+ws_attr: ["Service Provider", "Country", "AS", ["Latitude", "Longitude"]]
+
+
+filter_out_cod_start_users: True
+filter_out_cod_start_wss: True
+final_test: False
+
+up_model: knn
+hgnn: hgnn
+
+lossf: L1
+
+learner: adamw
+
+num_work: 4
+epochs: 500
+patience: 15
+
+u_eps: 0.001
+u_minpts: 3
+i_eps: 0.0761
+i_minpts: 14
+
+train_ratio: [0.025]
+
+hyper_parameters: ["train_batch_size","train_ratio","learning_rate", "weight_decay", "us_drop_rate","ws_drop_rate","embedding_size","user_hgnn_layers","ws_hgnn_layers","k_u","k_i","ubeta","wbeta","dbeta","lrpatience","factor","seed"]
+
